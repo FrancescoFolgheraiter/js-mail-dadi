@@ -29,6 +29,8 @@ accedi.addEventListener("click", function(){
             controllo = true;
         }
     }
+    //fine ciclo scorrimento
+    //stampa risultato
     if (controllo == true){
         alert("Accesso riuscito")
         risultato = "Sei collegato con la e-maile: " + email +";"; 
