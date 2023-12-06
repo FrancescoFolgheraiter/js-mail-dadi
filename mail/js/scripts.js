@@ -13,13 +13,29 @@ stampa un messaggio appropriato sull'esito del controllo.
 //input dati
 const accedi = document.querySelector("button");
 console.log(accedi);
-const arrayEmail= ["gino@hotmail.it", "admin@admin.com"];
+const arrayEmail= ["gino@hotmail.it", "admin@admin.com", "alessio.vietri@boolena.com"];
 //evento click su button accedi 
 accedi.addEventListener("click", function(){
-    const email = document.getElementById("email");
-    console.log(email);
-    for (let i = 0; i < arrayEmail.length; i++){
-        console.log(arrayEmail[i])
-    }
+    let controllo = false;
+    let risultato ="";
+    const email = document.getElementById("email").value;
+    console.log("email inserita",email, typeof email);
 
+    for (let i = 0; i < arrayEmail.length; i++){
+        if (email === arrayEmail[i]){
+            controllo = true;
+        }
+    }
+    if (controllo == true){
+        alert("Accesso riuscito")
+        risultato = "Sei collegato con la e-maile: " + email +";"; 
+    }
+    else{
+        alert("Accesso negato")
+        risultato = "Non sei collegato riprova con un altra e-mail";
+    }
+    //outputdati in pagina
+    document.getElementById("risultato").innerHTML = risultato;
+    //azzeramento campo emai
+    document.getElementById("email").value = "";
 })
