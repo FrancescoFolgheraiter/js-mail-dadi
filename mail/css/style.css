@@ -10,3 +10,15 @@ html{
     GENERAL
 */
 
+/*utility*/
+.border-radius20{
+    border-radius: 20px;
+}
+
+/*
+    MAIN
+*/
+
+.form-controllo{
+    border: 1px solid grey;
+}
